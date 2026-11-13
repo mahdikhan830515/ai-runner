@@ -1,0 +1,12 @@
+{
+  "name": "Ollama Runner",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "postCreateCommand": "curl -fsSL https://ollama.com/install.sh | sh && nohup ollama serve > /dev/null 2>&1 &",
+  "forwardPorts": [11434],
+  "portsAttributes": {
+    "11434": {
+      "label": "Ollama API",
+      "visibility": "public"
+    }
+  }
+}
